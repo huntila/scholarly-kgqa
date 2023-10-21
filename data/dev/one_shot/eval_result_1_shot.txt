@@ -1,0 +1,8 @@
+One shot with top 1 similar questions, performance of the model on random_test_200_answers_1.json (dev phase data)
+
+gold answers: loaded 200 questions!
+system answers: loaded 200 questions!
+Results:
+	Precision: 0.99597
+	Recall: 0.8206
+	F1: 0.89982

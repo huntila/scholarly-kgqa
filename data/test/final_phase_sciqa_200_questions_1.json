@@ -1,0 +1,802 @@
+[
+    {
+        "id": "AQ0638",
+        "question": "List the title and ID of research papers that contain a benchmark over the TREC-6 dataset?"
+    },
+    {
+        "id": "AQ1160",
+        "question": "What is the top benchmark result (metric and value) over the dataset RotoWire (Relation Generation)?"
+    },
+    {
+        "id": "AQ0329",
+        "question": "Can you list the models that have been evaluated on the BUCC French-to-English dataset?"
+    },
+    {
+        "id": "AQ1544",
+        "question": "Indicate the model that performed best in terms of F1 metric on the OntoNotes benchmark dataset?"
+    },
+    {
+        "id": "AQ0769",
+        "question": "What evaluation metrics are commonly used when benchmarking models on the WMT2014 English-German dataset?"
+    },
+    {
+        "id": "AQ1263",
+        "question": "What is the top benchmark score and its metric on the Atari 2600 Seaquest dataset?"
+    },
+    {
+        "id": "AQ1092",
+        "question": "What is the top benchmark result (metric and value) over the dataset NYT-single?"
+    },
+    {
+        "id": "AQ1638",
+        "question": "Which model has achieved the highest Score score on the Ball in cup, catch (DMControl100k) benchmark dataset?"
+    },
+    {
+        "id": "AQ1073",
+        "question": "Can you provide the highest benchmark result, including the metric and score, for the Pubmed dataset?"
+    },
+    {
+        "id": "AQ2083",
+        "question": "Can you provide links to code used in papers that benchmark the MEMEN (single model) model?"
+    },
+    {
+        "id": "AQ0041",
+        "question": "What are the models that have been benchmarked on the FSNS - Test dataset?"
+    },
+    {
+        "id": "AQ1664",
+        "question": "What is the best performing model benchmarking the CIFAR-10 Image Classification dataset in terms of Percentage error metric?"
+    },
+    {
+        "id": "AQ1718",
+        "question": "What is the best performing model benchmarking the Atari 2600 Up and Down dataset in terms of Score metric?"
+    },
+    {
+        "id": "AQ2117",
+        "question": "Where can I find code references in papers that have used the SRU++ Base model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ1245",
+        "question": "Can you provide the highest benchmark result, including the metric and score, for the AAPD dataset?"
+    },
+    {
+        "id": "AQ1639",
+        "question": "Which model has achieved the highest Score score on the Cheetah, run (DMControl500k) benchmark dataset?"
+    },
+    {
+        "id": "AQ1977",
+        "question": "Where can I find code references in papers that have used the STREET model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ0995",
+        "question": "What are the metrics of evaluation over the PubMed 20k RCT dataset?"
+    },
+    {
+        "id": "AQ1656",
+        "question": "What is the best performing model benchmarking the Oxford-IIIT Pets dataset in terms of FLOPS metric?"
+    },
+    {
+        "id": "AQ1358",
+        "question": "What is the top benchmark result (metric and value) over the dataset BUCC French-to-English?"
+    },
+    {
+        "id": "AQ1752",
+        "question": "Indicate the model that performed best in terms of Score metric on the Atari 2600 Montezuma's Revenge benchmark dataset?"
+    },
+    {
+        "id": "AQ2293",
+        "question": "List the code links in papers that use the Duel noop model in any benchmark?"
+    },
+    {
+        "id": "AQ1241",
+        "question": "What is the top benchmark score and its metric on the CINIC-10 dataset?"
+    },
+    {
+        "id": "AQ1337",
+        "question": "Can you provide the highest benchmark result, including the metric and score, for the Paper Field dataset?"
+    },
+    {
+        "id": "AQ0948",
+        "question": "What evaluation metrics are commonly used when benchmarking models on the Atari 2600 Skiing dataset?"
+    },
+    {
+        "id": "AQ2287",
+        "question": "Where can I find code references in papers that have used the Pointer + Coverage + EntailmentGen + QuestionGen model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ1807",
+        "question": "Indicate the model that performed best in terms of Accuracy metric on the Kuzushiji-MNIST benchmark dataset?"
+    },
+    {
+        "id": "AQ1317",
+        "question": "What is the highest benchmark result achieved on the Atari 2600 Star Gunner dataset, including the metric and its value?"
+    },
+    {
+        "id": "AQ1745",
+        "question": "Which model has achieved the highest F1 score score on the BUCC Chinese-to-English benchmark dataset?"
+    },
+    {
+        "id": "AQ1673",
+        "question": "Indicate the model that performed best in terms of Accuracy metric on the MLDoc Zero-Shot English-to-German benchmark dataset?"
+    },
+    {
+        "id": "AQ1300",
+        "question": "What is the top benchmark score and its metric on the Atari 2600 Ice Hockey dataset?"
+    },
+    {
+        "id": "AQ0692",
+        "question": "What evaluation metrics are commonly used when benchmarking models on the ARC-PDN dataset?"
+    },
+    {
+        "id": "AQ0495",
+        "question": "List the title and ID of research papers that contain a benchmark over the Penn Treebank (Word Level) dataset?"
+    },
+    {
+        "id": "AQ1231",
+        "question": "What is the top benchmark score and its metric on the Cheetah, run (DMControl500k) dataset?"
+    },
+    {
+        "id": "AQ0278",
+        "question": "Can you list the models that have been evaluated on the Atari 2600 Battle Zone dataset?"
+    },
+    {
+        "id": "AQ0392",
+        "question": "Provide a list of research paper titles and IDs that have benchmarked models on the Penn Treebank dataset?"
+    },
+    {
+        "id": "AQ0282",
+        "question": "What are the models that have been benchmarked on the Atari 2600 Space Invaders dataset?"
+    },
+    {
+        "id": "AQ1310",
+        "question": "What is the highest benchmark result achieved on the Atari 2600 Boxing dataset, including the metric and its value?"
+    },
+    {
+        "id": "AQ0756",
+        "question": "List the metrics that are used to evaluate models on the AG News benchmark dataset?"
+    },
+    {
+        "id": "AQ2455",
+        "question": "Provide a list of papers that have utilized the XLNet (base) model and include the links to their code?"
+    },
+    {
+        "id": "AQ1144",
+        "question": "What is the top benchmark result (metric and value) over the dataset CommonsenseQA?"
+    },
+    {
+        "id": "AQ2397",
+        "question": "Where can I find code references in papers that have used the DeiT-Ti model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ2207",
+        "question": "Can you provide links to code used in papers that benchmark the Temporal Convolutional Network model?"
+    },
+    {
+        "id": "AQ1142",
+        "question": "What is the highest benchmark result achieved on the CoQA dataset, including the metric and its value?"
+    },
+    {
+        "id": "AQ1956",
+        "question": "Where can I find code references in papers that have used the CATTS-XSUM model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ0492",
+        "question": "Provide a list of research paper titles and IDs that have benchmarked models on the enwik8 dataset?"
+    },
+    {
+        "id": "AQ1903",
+        "question": "List the datasets benchmarked under the Fine-Grained Image Classification research problem?"
+    },
+    {
+        "id": "AQ1806",
+        "question": "Which model has achieved the highest Top 1 Accuracy score on the ImageNet V2 benchmark dataset?"
+    },
+    {
+        "id": "AQ0932",
+        "question": "What evaluation metrics are commonly used when benchmarking models on the Atari 2600 Berzerk dataset?"
+    },
+    {
+        "id": "AQ2095",
+        "question": "Can you provide links to code used in papers that benchmark the Fine-Grained Gating model?"
+    },
+    {
+        "id": "AQ0102",
+        "question": "Could you provide a list of models that have been tested on the Reuters-21578 benchmark dataset?"
+    },
+    {
+        "id": "AQ1571",
+        "question": "What is the name of the top performing model in terms of F1 entity level score when benchmarked on the NCBI Disease dataset?"
+    },
+    {
+        "id": "AQ0379",
+        "question": "What are the titles and IDs of research papers that include a benchmark for the NLP-TDMS dataset?"
+    },
+    {
+        "id": "AQ0240",
+        "question": "Can you list the models that have been evaluated on the Atari 2600 Ms. Pacman dataset?"
+    },
+    {
+        "id": "AQ1827",
+        "question": "Indicate the model that performed best in terms of Macro Recall metric on the NLP-TDMS (Exp, arXiv only) benchmark dataset?"
+    },
+    {
+        "id": "AQ0980",
+        "question": "List the metrics that are used to evaluate models on the Yelp-5 benchmark dataset?"
+    },
+    {
+        "id": "AQ1787",
+        "question": "Which model has achieved the highest Score score on the Atari 2600 Yars Revenge benchmark dataset?"
+    },
+    {
+        "id": "AQ2033",
+        "question": "List the code links in papers that use the Unsupervised NMT + weight-sharing model in any benchmark?"
+    },
+    {
+        "id": "AQ2226",
+        "question": "Can you provide links to code used in papers that benchmark the XLNet-Large model?"
+    },
+    {
+        "id": "AQ1367",
+        "question": "What is the highest benchmark result achieved on the REDDIT-B dataset, including the metric and its value?"
+    },
+    {
+        "id": "AQ0573",
+        "question": "What are the titles and IDs of research papers that include a benchmark for the arXiv dataset?"
+    },
+    {
+        "id": "AQ0551",
+        "question": "Give me a list of research papers along with their titles and IDs, that have performed benchmarks on the Dmlab-30 dataset?"
+    },
+    {
+        "id": "HQ0081",
+        "question": "What quantity of iron oxide was discovered on Elorza crater?"
+    },
+    {
+        "id": "AQ0933",
+        "question": "Can you list the metrics used to evaluate models on the Atari 2600 Zaxxon dataset?"
+    },
+    {
+        "id": "AQ0850",
+        "question": "What evaluation metrics are commonly used when benchmarking models on the TempEval-3 dataset?"
+    },
+    {
+        "id": "AQ0235",
+        "question": "What models are being evaluated on the Atari 2600 Name This Game dataset?"
+    },
+    {
+        "id": "AQ1333",
+        "question": "What is the top benchmark score and its metric on the WOS-46985 dataset?"
+    },
+    {
+        "id": "AQ0946",
+        "question": "List the metrics that are used to evaluate models on the Atari 2600 Fishing Derby benchmark dataset?"
+    },
+    {
+        "id": "AQ1029",
+        "question": "Can you list the metrics used to evaluate models on the DocRED (Human-annotated) dataset?"
+    },
+    {
+        "id": "AQ0348",
+        "question": "What are the titles and IDs of research papers that include a benchmark for the SciREX dataset?"
+    },
+    {
+        "id": "AQ1082",
+        "question": "What is the highest benchmark result achieved on the NYT29 dataset, including the metric and its value?"
+    },
+    {
+        "id": "AQ1113",
+        "question": "Can you provide the highest benchmark result, including the metric and score, for the IWSLT2015 German-English dataset?"
+    },
+    {
+        "id": "AQ0262",
+        "question": "Can you list the models that have been evaluated on the Atari 2600 Skiing dataset?"
+    },
+    {
+        "id": "HQ0078",
+        "question": "Where did the study with maximal geographic scale take place?"
+    },
+    {
+        "id": "AQ1376",
+        "question": "Which model has achieved the highest F1 score score on the Penn Treebank benchmark dataset?"
+    },
+    {
+        "id": "AQ0410",
+        "question": "List the title and ID of research papers that contain a benchmark over the NYT24 dataset?"
+    },
+    {
+        "id": "AQ1498",
+        "question": "What is the best performing model benchmarking the PIQA dataset in terms of Accuracy metric?"
+    },
+    {
+        "id": "AQ1472",
+        "question": "What is the name of the top performing model in terms of Accuracy score when benchmarked on the TriviaQA dataset?"
+    },
+    {
+        "id": "AQ0083",
+        "question": "What are the models that have been benchmarked on the WMT2014 English-German dataset?"
+    },
+    {
+        "id": "AQ1928",
+        "question": "Provide a list of papers that have utilized the Tokenlearner model and include the links to their code?"
+    },
+    {
+        "id": "AQ1044",
+        "question": "Can you provide the highest benchmark result, including the metric and score, for the Softcite dataset?"
+    },
+    {
+        "id": "AQ1997",
+        "question": "Provide a list of papers that have utilized the Table-Sequence model and include the links to their code?"
+    },
+    {
+        "id": "AQ0559",
+        "question": "Give me a list of research papers along with their titles and IDs, that have performed benchmarks on the AAPD dataset?"
+    },
+    {
+        "id": "AQ0157",
+        "question": "What models are being evaluated on the Penn Treebank (Character Level) dataset?"
+    },
+    {
+        "id": "AQ0661",
+        "question": "Provide a list of research paper titles and IDs that have benchmarked models on the ImageNet ReaL dataset?"
+    },
+    {
+        "id": "AQ1953",
+        "question": "Provide a list of papers that have utilized the CL-Titles-Parser model and include the links to their code?"
+    },
+    {
+        "id": "AQ1804",
+        "question": "What is the name of the top performing model in terms of Params score when benchmarked on the VTAB-1k dataset?"
+    },
+    {
+        "id": "AQ0206",
+        "question": "Could you provide a list of models that have been tested on the Habitat 2020 Object Nav test-std benchmark dataset?"
+    },
+    {
+        "id": "AQ0829",
+        "question": "What are the metrics of evaluation over the CommitmentBank dataset?"
+    },
+    {
+        "id": "AQ1240",
+        "question": "What is the top benchmark result (metric and value) over the dataset Oxford-IIIT Pets?"
+    },
+    {
+        "id": "AQ1905",
+        "question": "List the datasets benchmarked under the SPARQL query optimization research problem?"
+    },
+    {
+        "id": "AQ1980",
+        "question": "Where can I find code references in papers that have used the TCN model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ1993",
+        "question": "Where can I find code references in papers that have used the PNDec model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ0605",
+        "question": "Provide a list of research paper titles and IDs that have benchmarked models on the Atari 2600 Skiing dataset?"
+    },
+    {
+        "id": "HQ0017",
+        "question": "What is the most common location in the studies?"
+    },
+    {
+        "id": "AQ2238",
+        "question": "Where can I find code references in papers that have used the MPAD-path model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ1355",
+        "question": "Can you provide the highest benchmark result, including the metric and score, for the Sequential MNIST dataset?"
+    },
+    {
+        "id": "AQ0015",
+        "question": "What models are being evaluated on the Softcite dataset?"
+    },
+    {
+        "id": "AQ1492",
+        "question": "Indicate the model that performed best in terms of Precision metric on the RotoWire (Relation Generation) benchmark dataset?"
+    },
+    {
+        "id": "AQ2355",
+        "question": "Can you provide links to code used in papers that benchmark the BiLSTM-Attention + ELMo model?"
+    },
+    {
+        "id": "AQ0666",
+        "question": "Give me a list of research papers along with their titles and IDs, that have performed benchmarks on the ObjectNet dataset?"
+    },
+    {
+        "id": "AQ1017",
+        "question": "Can you list the metrics used to evaluate models on the BUCC Russian-to-English dataset?"
+    },
+    {
+        "id": "AQ1357",
+        "question": "Can you provide the highest benchmark result, including the metric and score, for the BUCC German-to-English dataset?"
+    },
+    {
+        "id": "AQ1155",
+        "question": "Can you provide the highest benchmark result, including the metric and score, for the Natural Questions (long) dataset?"
+    },
+    {
+        "id": "AQ0525",
+        "question": "Provide a list of research paper titles and IDs that have benchmarked models on the NCBI-disease dataset?"
+    },
+    {
+        "id": "AQ1513",
+        "question": "What is the name of the top performing model in terms of A2 score when benchmarked on the ANLI test dataset?"
+    },
+    {
+        "id": "AQ1466",
+        "question": "Which model has achieved the highest F1 score on the SQuAD1.1 dev benchmark dataset?"
+    },
+    {
+        "id": "AQ1062",
+        "question": "What is the top benchmark score and its metric on the Automatically labeled Medline abstracts corpus dataset?"
+    },
+    {
+        "id": "AQ1569",
+        "question": "Indicate the model that performed best in terms of F1 metric on the BC5CDR-disease benchmark dataset?"
+    },
+    {
+        "id": "AQ1391",
+        "question": "What is the best performing model benchmarking the ACE 2004 dataset in terms of RE+ Micro F1 metric?"
+    },
+    {
+        "id": "AQ2418",
+        "question": "Can you provide links to code used in papers that benchmark the ResNet-152 (SAM) model?"
+    },
+    {
+        "id": "AQ0097",
+        "question": "Can you list the models that have been evaluated on the Multimodal PISA dataset?"
+    },
+    {
+        "id": "AQ0156",
+        "question": "Can you list the models that have been evaluated on the enwiki8 dataset?"
+    },
+    {
+        "id": "AQ2336",
+        "question": "Provide a list of papers that have utilized the DQN-PixelCNN model and include the links to their code?"
+    },
+    {
+        "id": "AQ1839",
+        "question": "Name the datasets that have been used for benchmarking in the Image Classification research problem?"
+    },
+    {
+        "id": "AQ0250",
+        "question": "Could you provide a list of models that have been tested on the Atari 2600 River Raid benchmark dataset?"
+    },
+    {
+        "id": "AQ2413",
+        "question": "Provide a list of papers that have utilized the CvT-21 (384 res) model and include the links to their code?"
+    },
+    {
+        "id": "AQ0503",
+        "question": "Give me a list of research papers along with their titles and IDs, that have performed benchmarks on the BIOSSES dataset?"
+    },
+    {
+        "id": "HQ0037",
+        "question": "Who has contributed to the largest number of articles about coronavirus?"
+    },
+    {
+        "id": "AQ0897",
+        "question": "List the metrics that are used to evaluate models on the Oxford-IIIT Pets benchmark dataset?"
+    },
+    {
+        "id": "AQ0281",
+        "question": "Can you list the models that have been evaluated on the Atari 2600 Boxing dataset?"
+    },
+    {
+        "id": "AQ1583",
+        "question": "Which model has achieved the highest Accuracy score on the Yelp-5 benchmark dataset?"
+    },
+    {
+        "id": "AQ1105",
+        "question": "Can you provide the highest benchmark result, including the metric and score, for the WMT2014 French-English dataset?"
+    },
+    {
+        "id": "AQ0209",
+        "question": "Can you list the models that have been evaluated on the ClueWeb09-B dataset?"
+    },
+    {
+        "id": "AQ1939",
+        "question": "Where can I find code references in papers that have used the Concept Mention Extraction model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ0888",
+        "question": "List the metrics that are used to evaluate models on the Cheetah, run (DMControl500k) benchmark dataset?"
+    },
+    {
+        "id": "AQ0533",
+        "question": "What are the titles and IDs of research papers that include a benchmark for the ShARe/CLEF eHealth corpus dataset?"
+    },
+    {
+        "id": "AQ1272",
+        "question": "What is the top benchmark score and its metric on the Atari 2600 Breakout dataset?"
+    },
+    {
+        "id": "AQ2385",
+        "question": "Where can I find code references in papers that have used the EfficientNetV2-L model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ2308",
+        "question": "Provide a list of papers that have utilized the A3C FF hs model and include the links to their code?"
+    },
+    {
+        "id": "AQ1088",
+        "question": "Can you provide the highest benchmark result, including the metric and score, for the ACE 2005 dataset?"
+    },
+    {
+        "id": "AQ1945",
+        "question": "List the code links in papers that use the H-NLI model in any benchmark?"
+    },
+    {
+        "id": "AQ2060",
+        "question": "Can you provide links to code used in papers that benchmark the BERTwwm + SQuAD 2 model?"
+    },
+    {
+        "id": "AQ1136",
+        "question": "What is the top benchmark score and its metric on the Natural Questions (short) dataset?"
+    },
+    {
+        "id": "AQ0961",
+        "question": "What are the metrics of evaluation over the Atari 2600 Frostbite dataset?"
+    },
+    {
+        "id": "AQ0142",
+        "question": "Can you list the models that have been evaluated on the MultiNLI dataset?"
+    },
+    {
+        "id": "AQ1578",
+        "question": "What is the best performing model benchmarking the X-Sum dataset in terms of ROUGE-2 metric?"
+    },
+    {
+        "id": "AQ0439",
+        "question": "Provide a list of research paper titles and IDs that have benchmarked models on the Kinetics-600 dataset?"
+    },
+    {
+        "id": "AQ0762",
+        "question": "What evaluation metrics are commonly used when benchmarking models on the WMT2014 French-English dataset?"
+    },
+    {
+        "id": "AQ1402",
+        "question": "What is the name of the top performing model in terms of F1 score when benchmarked on the NYT-single dataset?"
+    },
+    {
+        "id": "AQ1335",
+        "question": "What is the highest benchmark result achieved on the Yelp-14 dataset, including the metric and its value?"
+    },
+    {
+        "id": "AQ1262",
+        "question": "What is the top benchmark result (metric and value) over the dataset AESLC?"
+    },
+    {
+        "id": "AQ1698",
+        "question": "What is the best performing model benchmarking the Atari 2600 Centipede dataset in terms of Score metric?"
+    },
+    {
+        "id": "AQ1923",
+        "question": "List the code links in papers that use the Long Short Transformer model in any benchmark?"
+    },
+    {
+        "id": "AQ2277",
+        "question": "Can you provide links to code used in papers that benchmark the T-ConvS2S model?"
+    },
+    {
+        "id": "AQ1687",
+        "question": "What is the best performing model benchmarking the AESLC dataset in terms of ROUGE-1 metric?"
+    },
+    {
+        "id": "AQ2092",
+        "question": "List the code links in papers that use the Dynamic Coattention Networks (single model) model in any benchmark?"
+    },
+    {
+        "id": "AQ1302",
+        "question": "What is the top benchmark score and its metric on the Atari 2600 Tennis dataset?"
+    },
+    {
+        "id": "AQ1748",
+        "question": "What is the name of the top performing model in terms of NLL score when benchmarked on the Nottingham dataset?"
+    },
+    {
+        "id": "AQ1087",
+        "question": "What is the top benchmark result (metric and value) over the dataset ACE 2004?"
+    },
+    {
+        "id": "AQ2411",
+        "question": "Can you provide links to code used in papers that benchmark the CAIT-XS-36 model?"
+    },
+    {
+        "id": "AQ1439",
+        "question": "What is the best performing model benchmarking the ImageNet 64x64 dataset in terms of Bits per dim metric?"
+    },
+    {
+        "id": "AQ1233",
+        "question": "What is the highest benchmark result achieved on the Walker, walk (DMControl500k) dataset, including the metric and its value?"
+    },
+    {
+        "id": "AQ2249",
+        "question": "Where can I find code references in papers that have used the SemExp model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ1332",
+        "question": "What is the highest benchmark result achieved on the WOS-5736 dataset, including the metric and its value?"
+    },
+    {
+        "id": "AQ0053",
+        "question": "Could you provide a list of models that have been tested on the NYT29 benchmark dataset?"
+    },
+    {
+        "id": "AQ1920",
+        "question": "Provide a list of papers that have utilized the Funnel Transformer model and include the links to their code?"
+    },
+    {
+        "id": "AQ1723",
+        "question": "Indicate the model that performed best in terms of Score metric on the Atari 2600 Tennis benchmark dataset?"
+    },
+    {
+        "id": "AQ1119",
+        "question": "What is the top benchmark score and its metric on the Stanford Dogs dataset?"
+    },
+    {
+        "id": "AQ1891",
+        "question": "What are the most commonly used benchmark datasets for the Entity Disambiguation research field?"
+    },
+    {
+        "id": "AQ1878",
+        "question": "Name the datasets that have been used for benchmarking in the Robot Navigation research problem?"
+    },
+    {
+        "id": "HQ0043",
+        "question": "Which are 3 the most common variables for the atmosphere models?"
+    },
+    {
+        "id": "AQ1213",
+        "question": "What is the top benchmark result (metric and value) over the dataset BC2GM?"
+    },
+    {
+        "id": "AQ0279",
+        "question": "What are the models that have been benchmarked on the Atari 2600 Road Runner dataset?"
+    },
+    {
+        "id": "AQ2452",
+        "question": "Where can I find code references in papers that have used the AxCell model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ1964",
+        "question": "List the code links in papers that use the linear-chain CRFs model in any benchmark?"
+    },
+    {
+        "id": "AQ0339",
+        "question": "Can you list the models that have been evaluated on the PROTEINS dataset?"
+    },
+    {
+        "id": "AQ0963",
+        "question": "What evaluation metrics are commonly used when benchmarking models on the Atari 2600 Bowling dataset?"
+    },
+    {
+        "id": "AQ0786",
+        "question": "What evaluation metrics are commonly used when benchmarking models on the UCF101 (finetuned) dataset?"
+    },
+    {
+        "id": "AQ0248",
+        "question": "Can you list the models that have been evaluated on the Atari 2600 Assault dataset?"
+    },
+    {
+        "id": "AQ1866",
+        "question": "What are the most commonly used benchmark datasets for the Natural Language Inference research field?"
+    },
+    {
+        "id": "AQ0331",
+        "question": "Could you provide a list of models that have been tested on the BUCC Russian-to-English benchmark dataset?"
+    },
+    {
+        "id": "AQ1587",
+        "question": "Indicate the model that performed best in terms of F1 metric on the PubMed 20k RCT benchmark dataset?"
+    },
+    {
+        "id": "AQ0970",
+        "question": "List the metrics that are used to evaluate models on the Atari 2600 HERO benchmark dataset?"
+    },
+    {
+        "id": "AQ0040",
+        "question": "What models are being evaluated on the seel.cse.lsu.edu/data/re17.zip  dataset?"
+    },
+    {
+        "id": "AQ2274",
+        "question": "Where can I find code references in papers that have used the PEGASUS model for benchmarking purposes?"
+    },
+    {
+        "id": "AQ0114",
+        "question": "What are the models that have been benchmarked on the BoolQ dataset?"
+    },
+    {
+        "id": "AQ0813",
+        "question": "What evaluation metrics are commonly used when benchmarking models on the SQuAD2.0 dataset?"
+    },
+    {
+        "id": "AQ0023",
+        "question": "Could you provide a list of models that have been tested on the SciCite benchmark dataset?"
+    },
+    {
+        "id": "AQ1654",
+        "question": "Indicate the model that performed best in terms of PARAMS metric on the FGVC Aircraft benchmark dataset?"
+    },
+    {
+        "id": "AQ0101",
+        "question": "Could you provide a list of models that have been tested on the HMDB51 benchmark dataset?"
+    },
+    {
+        "id": "AQ0639",
+        "question": "List the title and ID of research papers that contain a benchmark over the Ohsumed dataset?"
+    },
+    {
+        "id": "AQ2446",
+        "question": "Provide a list of papers that have utilized the Shake-Shake (SAM) model and include the links to their code?"
+    },
+    {
+        "id": "AQ0779",
+        "question": "What are the metrics of evaluation over the Fashion-MNIST dataset?"
+    },
+    {
+        "id": "AQ2454",
+        "question": "List the code links in papers that use the GPT-2 (small) model in any benchmark?"
+    },
+    {
+        "id": "AQ2050",
+        "question": "Provide a list of papers that have utilized the MMV TSM-50x2 model and include the links to their code?"
+    },
+    {
+        "id": "HQ0097",
+        "question": "What types of nanocarriers do have therapeutic effect?"
+    },
+    {
+        "id": "AQ0056",
+        "question": "What are the models that have been benchmarked on the DuIE dataset?"
+    },
+    {
+        "id": "AQ0611",
+        "question": "What are the titles and IDs of research papers that include a benchmark for the Atari 2600 Asterix dataset?"
+    },
+    {
+        "id": "AQ0607",
+        "question": "What are the titles and IDs of research papers that include a benchmark for the Atari 2600 Bank Heist dataset?"
+    },
+    {
+        "id": "AQ0798",
+        "question": "What evaluation metrics are commonly used when benchmarking models on the MultiRC dataset?"
+    },
+    {
+        "id": "AQ0039",
+        "question": "Could you provide a list of models that have been tested on the seel.cse.lsu.edu/data/refsq17.zip benchmark dataset?"
+    },
+    {
+        "id": "AQ0443",
+        "question": "Provide a list of research paper titles and IDs that have benchmarked models on the UCF101 (finetuned) dataset?"
+    },
+    {
+        "id": "AQ1633",
+        "question": "Which model has achieved the highest Score score on the Reacher, easy (DMControl500k) benchmark dataset?"
+    },
+    {
+        "id": "AQ2094",
+        "question": "List the code links in papers that use the OTF spelling+lemma (single) model in any benchmark?"
+    },
+    {
+        "id": "AQ1059",
+        "question": "What is the top benchmark score and its metric on the MAZEA dataset?"
+    },
+    {
+        "id": "AQ0298",
+        "question": "Could you provide a list of models that have been tested on the IMDb-M benchmark dataset?"
+    },
+    {
+        "id": "AQ0287",
+        "question": "What models are being evaluated on the Atari 2600 Chopper Command dataset?"
+    },
+    {
+        "id": "AQ1573",
+        "question": "Indicate the model that performed best in terms of F1 metric on the ShARe/CLEF eHealth corpus benchmark dataset?"
+    },
+    {
+        "id": "AQ1320",
+        "question": "What is the highest benchmark result achieved on the Amazon-2 dataset, including the metric and its value?"
+    }
+]

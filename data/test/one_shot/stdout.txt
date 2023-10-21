@@ -1,0 +1,10 @@
+Config:
+	Ground truth: /tmp/codalab/tmp0ZQa_8/run/input/ref/answer.txt
+	System path: /tmp/codalab/tmp0ZQa_8/run/input/res/answer.txt
+	gold answers: loaded 200 questions!
+	system answers: loaded 200 questions!
+
+Results:
+	Precision: 0.99171
+	Recall: 0.93069
+	F1: 0.96023

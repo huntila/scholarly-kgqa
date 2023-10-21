@@ -1,0 +1,802 @@
+[
+  {
+    "id": "AQ0645",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"HoC\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ2087",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Multi-Perspective Matching (ensemble)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0435",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ImageNet 64x64\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1250",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"MLDoc Zero-Shot German-to-French\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ1227",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Cartpole, swingup (DMControl500k)\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ1000",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"VTAB-1k\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ0547",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Walker, walk (DMControl500k)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1405",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Entity F1\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"SciERC\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0635",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"DBpedia\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ0863",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"SST-5 Fine-grained classification\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ0618",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Frostbite\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ0864",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Yelp Fine-grained classification\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ2426",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"DY-MobileNetV3-Small\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0543",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Cart Pole (OpenAI Gym)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ0511",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"STS Benchmark\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ0107",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Natural Questions (short)\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ2246",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"SAC\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0344",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"SemEval-2018 Task 7 dataset\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "HQ0058",
+    "sparql": "SPARQL query for the first question: SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"BiT-L (50 hypers/task)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. } SPARQL query for the second question: SELECT ?precision ?recall ?f1_score WHERE { ?study orkgp:HAS_ALGORITHM \"naive_bayes\". ?study orkgp:HAS_FEATURE_EXTRACTION \"bag_of_words\". ?study orkgp:HAS_TASK \"classify_user_feedback_as_feature_request\". ?study orkgp:HAS_EVALUATION_METRIC \"precision\" ?precision. ?study orkgp:HAS_EVALUATION_METRIC \"recall\" ?recall. ?study orkgp:HAS_EVALUATION_METRIC \"f1_score\" ?f1_score. }"
+  },
+  {
+    "id": "AQ0999",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Bits per byte\") { SELECT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Classical music, 5 seconds at 12 kHz\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) }"
+  },
+  {
+    "id": "AQ2462",
+    "sparql": "SELECT DISTINCT ?problem ?problem_lbl WHERE { ?rf a orkgc:ResearchField; rdfs:label ?rf_label. FILTER (str( ?rf_label) = \"Artificial Intelligence\") ?paper orkgp:P30 ?rf; orkgp:P31 ?cont. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:P32 ?problem. ?problem rdfs:label ?problem_lbl. }"
+  },
+  {
+    "id": "AQ1465",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Accuracy\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"CommonsenseQA\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "HQ0038",
+    "sparql": "SELECT (AVG( ?installed_cap_value) AS ?average_installed_cap_value) WHERE { orkg:R153801 orkgp:compareContribution ?contrib. ?contrib orkgp:P43135 ?energy_sources. ?energy_sources rdfs:label ?energy_sources_labels. orkgp:P43133 ?installed_capacity. FILTER(REGEX( ?energy_sources_labels, \"carbon-based fuel\")) ?installed_capacity orkgp:HAS_VALUE ?value. BIND(xsd:float( ?value) AS ?installed_cap_value) }"
+  },
+  {
+    "id": "AQ1416",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"BLEU score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WMT2016 English-Russian\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0653",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"SciCite\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ2387",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"BiT-M (ResNet)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1860",
+    "sparql": "SELECT DISTINCT ?dataset ?dataset_lbl WHERE { ?problem a orkgc:Problem; rdfs:label ?problem_lbl. FILTER (str( ?problem_lbl) = \"Reading Comprehension\") ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:P32 ?problem. }"
+  },
+  {
+    "id": "AQ2077",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"MEMEN\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1433",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"BLEU score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WMT2016 English-German\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ1802",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Accuracy\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Reuters En-De\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0299",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Classic\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ0652",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"PubMed 20k RCT\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ2068",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"DCN\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0759",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"200k Short Texts for Humor Detection\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl. } }"
+  },
+  {
+    "id": "AQ0447",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"CUB-200-2011\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1702",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Assault\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ1712",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Enduro\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0566",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"MLDoc Zero-Shot English-to-Russian\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ2216",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"LayerNorm HM-LSTM\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0314",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"VTAB-1k\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} }"
+  },
+  {
+    "id": "AQ1212",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"BC5CDR-chemical\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0026",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"SciTLDR\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ2203",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"6-layer QRNN\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0742",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"DuIE\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ2025",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Rfa-Gate-arccos\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0892",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Habitat 2020 Object Nav test-std\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ0522",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"MPQA\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1740",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Permuted Accuracy\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Sequential MNIST\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ1689",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Seaquest\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ1361",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ModelNet40\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ1169",
+    "sparql": "SELECT DISTINCT ?benchmark_score ?metric_lbl WHERE { ?benchmark a orkgc:Benchmark; rdfs:label ?benchmark_lbl. FILTER (str( ?benchmark_lbl) = \"Words in Context\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. ?metric rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Accuracy\") } ORDER BY DESC( ?value) LIMIT 1"
+  },
+  {
+    "id": "AQ2081",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"BiDAF + Self Attention + ELMo (single model)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1069",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"seel.cse.lsu.edu/data/re17.zip\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ1886",
+    "sparql": "SELECT DISTINCT ?dataset ?dataset_lbl WHERE { ?problem a orkgc:Problem; rdfs:label ?problem_lbl. FILTER (str( ?problem_lbl) = \"Sentence Classification\") ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:P32 ?problem. }"
+  },
+  {
+    "id": "AQ2091",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Multi-Perspective Matching (single model)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0181",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"SST-2 Binary classification\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} }"
+  },
+  {
+    "id": "AQ0361",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"SciERC\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1810",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Params\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ImageNet ReaL\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ1369",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"IMDb-B\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0792",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Quasart-T\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ1870",
+    "sparql": "SELECT DISTINCT ?dataset ?dataset_lbl WHERE { ?problem a orkgc:Problem; rdfs:label ?problem_lbl. FILTER (str( ?problem_lbl) = \"Semantic Role Labeling\") ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:P32 ?problem. }"
+  },
+  {
+    "id": "AQ1593",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"1-of-100 Accuracy\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"PolyAI Reddit\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0778",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ImageNet 64x64\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ1373",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Sequence error\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"FSNS - Test\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0163",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Jacquard dataset\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ1531",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Test perplexity\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WikiText-103\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0460",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WebQuestions\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1116",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WMT2016 Czech-English\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ1976",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"SEE\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ2176",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"PAR Transformer Large\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1180",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Hutter Prize\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "HQ0099",
+    "sparql": "SPARQL query for the first question: SELECT ?approach ?approach_label WHERE { orkgr:R6948 orkgp:compareContribution ?cont. ?cont orkgp:P15 ?implementation. ?implementation orkgp:P5043 ?approach. ?approach rdfs:label ?approach_label. FILTER (LANG( ?approach_label) = en && ?approach_label = text summarization) } ORDER BY DESC(COUNT( ?approach_label)) LIMIT 1"
+  },
+  {
+    "id": "AQ1415",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"F1-score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"200k Short Texts for Humor Detection\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ1013",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Sequential CIFAR-10\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ0500",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Penn Treebank (Character Level)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1733",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Q*Bert\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0217",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Reuters RCV1/RCV2 English-to-German\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ0233",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"AESLC\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ0060",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"GAD\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ0530",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"BC5CDR-disease\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ2078",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"BiDAF + Self Attention + ELMo (ensemble)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ2046",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"MMV\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1537",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Number of params\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Penn Treebank (Character Level)\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ2167",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"LSTM (Bai et al., 2018)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "HQ0091",
+    "sparql": "SELECT ?definition WHERE { orkgp:R6898 orkgp:compareContribution ?cont. ?cont orkgp:P34 ?eval. ?eval rdfs:label ?eval_labels. FILTER(REGEX( ?eval_labels, \"SemGraphQA\")) ?eval orkgp:P3004 ?precision; orkgp:P5015 ?recall. orkgp:R6898 orkgp:compareContribution ?cont. ?cont orkgp:P34 ?eval. ?eval rdfs:label ?eval_labels. FILTER(REGEX( ?eval_labels, \"SemGraphQA\")) ?eval orkgp:P3004 ?precision; orkgp:P5015 ?recall. orkgp:R6898 orkgp:compareContribution ?cont. ?cont orkgp:P34 ?eval. ?eval rdfs:label ?eval_labels. FILTER(REGEX( ?eval_labels, \"SemGraphQA\")) ?eval orkgp:P3004 ?precision; orkgp:P5015 ?recall. orkgp:R6898 orkgp:compareContribution ?cont. ?cont orkgp:P34 ?eval. ?eval rdfs:label ?eval_labels. FILTER(REGEX( ?eval_labels, \"SemGraphQA\")) ?eval orkgp:P3004 ?precision; orkgp:P5015 ?recall. orkgp:R6898 orkgp:compareContribution ?cont. ?cont orkgp:P34 ?eval. ?eval rdfs:label ?eval_labels. FILTER(REGEX( ?eval_labels, \"SemGraphQA\")) ?eval orkgp:P3004 ?precision; orkgp:P5015 ?recall. orkgp:R6898 orkgp:compareContribution ?cont. ?cont orkgp:P34 ?eval. ?eval rdfs:label ?eval_labels. FILTER(REGEX( ?eval_labels, \""
+  },
+  {
+    "id": "AQ1168",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Supervised\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0698",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"TDMTaggedCorpus\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ1813",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Top-1 Accuracy\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"iNaturalist 2018\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ2193",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Transformer-XL Base\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ2436",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"ImageNet + iNat on WS-DAN\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1637",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Cart Pole (OpenAI Gym)\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ2295",
+    "sparql": "SPARQL query for the first question: SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Prior hs\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ2437",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"BiT-S (ResNet)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "HQ0032",
+    "sparql": "SELECT ?leadCompound WHERE { orkgp:P15090 ?leadCompound. ?leadCompound orkgp:P15090 ?substrate. ?substrate orkgp:P15090 ?catalyst. ?catalyst orkgr:R25900 ?leadCompound. } ORDER BY DESC(COUNT( ?leadCompound)) LIMIT 1"
+  },
+  {
+    "id": "AQ0507",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"TempEval-3\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1287",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Enduro\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0409",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WLPC\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1112",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WMT2014 English-German\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0259",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Solaris\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. }"
+  },
+  {
+    "id": "AQ1854",
+    "sparql": "SELECT DISTINCT ?dataset ?dataset_lbl WHERE { ?problem a orkgc:Problem; rdfs:label ?problem_lbl. FILTER (str( ?problem_lbl) = \"Joint Entity and Relation Extraction\") ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:P32 ?problem. }"
+  },
+  {
+    "id": "AQ1229",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Cart Pole (OpenAI Gym)\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0172",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"GENIA - LAS\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} }"
+  },
+  {
+    "id": "AQ0424",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WMT2014 German-English\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1873",
+    "sparql": "SELECT DISTINCT ?dataset ?dataset_lbl WHERE { ?problem a orkgc:Problem; rdfs:label ?problem_lbl. FILTER (str( ?problem_lbl) = \"Audio Classification\") ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:P32 ?problem. }"
+  },
+  {
+    "id": "AQ2348",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"KD-LSTMreg\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0164",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"TempEval-3\") ?benchmark orkgp:HAS_DATASES ?dataset. ?benchmark orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ1484",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"F1 score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Natural Questions (long)\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ2214",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"All-attention network - 18 layers\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1545",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"F1\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"CoNLL 2012\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; ?eval orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ1904",
+    "sparql": "SELECT DISTINCT ?dataset ?dataset_lbl WHERE { ?problem a orkgc:Problem; rdfs:label ?problem_lbl. FILTER (str( ?problem_lbl) = \"Scientific Results Extraction\") ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:P32 ?problem. }"
+  },
+  {
+    "id": "AQ0190",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ShARe/CLEF eHealth corpus\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ1285",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Freeway\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ2292",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"C51 noop\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1567",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"F1\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"CoNLL++\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0159",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"MedSTS\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ1422",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"BLEU score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"IWSLT2014 German-English\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0816",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Rotowire (Content Selection)\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ1163",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ARC (Challenge)\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0952",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Up and Down\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ0425",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WMT2016 German-English\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1134",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Hendrycks Test\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0042",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"MNIST\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ1776",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Number of params\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ImageNet\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0721",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"DRI Corpus\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ1535",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Test perplexity\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WikiText-2\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ2294",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Duel hs\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1985",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"BART\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0852",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"OntoNotes\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ2328",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"MFEC\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0437",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"STL-10\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1706",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Asteroids\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0861",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ESC-50\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ0007",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ACL Anthology\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ1685",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"ROUGE-2\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"CL-SciSumm\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ2194",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Adaptive Input Large\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ2221",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"AlexNet\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. } SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"MultiGrasp\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0924",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Double Dunk\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ1949",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"BERT + BiLSTM + CRF Decoding\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1864",
+    "sparql": "SELECT DISTINCT ?dataset ?dataset_lbl WHERE { ?problem a orkgc:Problem; rdfs:label ?problem_lbl. FILTER (str( ?problem_lbl) = \"Common Sense Reasoning\") ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:P32 ?problem. }"
+  },
+  {
+    "id": "AQ0612",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Defender\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "HQ0057",
+    "sparql": "SELECT DISTINCT ?dataset ?dataset_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Dataset mentions in Social Sciences\") ?dataset orkgp:HAS_DATASET ?dataset_used. ?dataset_used orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_DATA_SET ?dataset_found. ?dataset_found rdfs:label ?dataset_found_lbl. }"
+  },
+  {
+    "id": "AQ0002",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"FTD dataset\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ1176",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WNLI\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ2008",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"DocRED-BiLSTM\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0977",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Amazon-2\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ0550",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Gibson PointGoal Navigation\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ0523",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Yelp Binary classification\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "HQ0003",
+    "sparql": "SPARQL query for the first question: SELECT ?approach ?approach_label WHERE { orkg:R6948 orkgp:compareContribution ?cont. ?cont orkgp:P15 ?implementation. ?implementation orkgp:P5043 ?approach. ?approach rdfs:label ?approach_label. FILTER (LANG( ?approach_label) = en && STR( ?approach_label) containssummarization) } ORDER BY DESC(COUNT( ?approach_label)) LIMIT 1"
+  },
+  {
+    "id": "AQ0777",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Stanford Cars\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ0489",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"SNLI\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1216",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"BC5CDR-disease\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ1971",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"CRF with sentence expansion\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0422",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WMT2016 English-Romanian\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ0717",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ART/CoreSC\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ1931",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Switch Transformer\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1388",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"RE+ Micro F1\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"CoNLL04\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ1505",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Senseval 2\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Supervised:\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; ?eval orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ0604",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Venture\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1649",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"SUCCESS\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Habitat 2020 Object Nav test-std\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ1704",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 River Raid\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ2309",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"A3C FF (1 day) hs\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0318",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ImageNet ReaL\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ0835",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"enwik8\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ0473",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Rotowire (Content Selection)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ0678",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"PWC Leaderboards (restricted)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ0713",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"SciGEN\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ1884",
+    "sparql": "SELECT DISTINCT ?dataset ?dataset_lbl WHERE { ?problem a orkgc:Problem; rdfs:label ?problem_lbl. FILTER (str( ?problem_lbl) = \"Text Summarization\") ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:P32 ?problem. }"
+  },
+  {
+    "id": "AQ1967",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Flair-TDM\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0799",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"CoQA\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ0059",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ACE 2005\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "AQ0964",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Battle Zone\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ2205",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"NASCell\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1001",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"iNaturalist 2019\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl. } }"
+  },
+  {
+    "id": "AQ0013",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"CommonsenseQA\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?paper orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?paper orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } }"
+  },
+  {
+    "id": "HQ0031",
+    "sparql": "SELECT ?coolant WHERE { orkgp:R6948 orkgp:hasCoolant ?coolant. FILTER (LANG( ?coolant) = en) }"
+  },
+  {
+    "id": "AQ2304",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Rational DQN Average\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0699",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"CommonsenseQA\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ2071",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"FG fine-grained gate model\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0313",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Classical music, 5 seconds at 12 kHz\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. }"
+  },
+  {
+    "id": "AQ1267",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Double Dunk\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0445",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Reuters-21578\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ1622",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"MACs\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ImageNet\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ2273",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"AcrE\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1273",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Centipede\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0537",
+    "sparql": "SELECT DISTINCT ?paper ?paper_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Reacher, easy (DMControl100k)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?paper orkgp:P31 ?cont; rdfs:label ?paper_lbl. }"
+  },
+  {
+    "id": "AQ2073",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"BiDAF + Self Attention + ELMo\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1221",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Ball in cup, catch (DMControl500k)\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ1710",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Atari 2600 Freeway\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_BEAT ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ2376",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"ANODE\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ2318",
+    "sparql": "SPARQL query for the first question: SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"DARQN hard\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1125",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"Kinetics-600\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ2064",
+    "sparql": "SPARQL query for the first question: SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"LUKE (single model)\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ0808",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"SQuAD1.1\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ2380",
+    "sparql": "SELECT DISTINCT ?code WHERE { ?model a orkgc:Model; rdfs:label ?model_lbl. FILTER (str( ?model_lbl) = \"Tsetlin Machine\") ?benchmark orkgp:HAS_DATASET ?dataset. ?cont orkgp:HAS_BENCHMARK ?benchmark. ?cont orkgp:HAS_MODEL ?model; orkgp:HAS_SOURCE_CODE ?code. }"
+  },
+  {
+    "id": "AQ1428",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"BLEU score\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"WMT2016 German-English\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; ?model orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  },
+  {
+    "id": "AQ1171",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"MultiNLI\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ1070",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"FSNS - Test\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ1345",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl (MAX( ?value) AS ?score) WHERE { { SELECT ?metric ?metric_lbl ?value WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"ImageNet V2\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} ?cont orkgp:HAS_BENCHMARK ?benchmark. OPTIONAL { ?cont orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl.} } ORDER BY DESC( ?value) } } GROUP BY ?metric ?metric_lbl"
+  },
+  {
+    "id": "AQ0696",
+    "sparql": "SELECT DISTINCT ?metric ?metric_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"TSE-NER\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. OPTIONAL { ?eval orkgp:HAS_METRIC ?metric. ?metric rdfs:label ?metric_lbl.} }"
+  },
+  {
+    "id": "AQ1447",
+    "sparql": "SELECT DISTINCT ?model ?model_lbl WHERE { ?metric a orkgc:Metric; rdfs:label ?metric_lbl. FILTER (str( ?metric_lbl) = \"Pre-training Dataset\") { SELECT ?model ?model_lbl WHERE { ?dataset a orkgc:Dataset; rdfs:label ?dataset_lbl. FILTER (str( ?dataset_lbl) = \"HMDB51\") ?benchmark orkgp:HAS_DATASET ?dataset; orkgp:HAS_EVALUATION ?eval. ?eval orkgp:HAS_VALUE ?value; orkgp:HAS_METRIC ?metric. ?cont orkgp:HAS_BENCHMARK ?benchmark; orkgp:HAS_MODEL ?model. ?model rdfs:label ?model_lbl. } ORDER BY DESC( ?value) LIMIT 1 }"
+  }
+]
